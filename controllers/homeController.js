@@ -8,7 +8,7 @@
 const homeController = {}
 
 const redis = require('redis')
-const client = redis.createClient() // creates a new client
+const client = redis.createClient(process.env.REDIS_URL) // creates a new client
 
 /**
  * Handles the login procedure
